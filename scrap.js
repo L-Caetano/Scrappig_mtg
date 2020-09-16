@@ -2,7 +2,7 @@ const request = require('request');
 const cheerio = require('cheerio');
 const fs = require("fs");
 const readline = require('readline');
-let haha = 0;
+let counter = 0;
 let deckvalor = 0;
  function procurar(procura,number){
 request(`https://www.ligamagic.com.br/?view=cards%2Fsearch&card=${procura}+searchprod%3D0&tipo=1`, (error, response, html)=>{
@@ -25,8 +25,8 @@ console.log('-------------------------------------');
 console.log('carta',procura,'Row: ',haha,'Numero: ',number,'Preço: ',preco);
 console.log('-------------------------------------');
  console.log('valor do deck atual: ',deckvalor);
-      // console.debug(procura,preco,haha);
-       haha++;
+      // console.debug(procura,preco,counter);
+       counter++;
        //console.log(preco);
        }
     }
